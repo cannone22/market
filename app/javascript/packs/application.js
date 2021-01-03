@@ -11,5 +11,9 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-//= require materialize
-//= require materialize-sprockets
+
+ //= require rails-ujs
+ //= require jquery
+ //= require materialize-sprockets
+ //= require turbolinks
+ //= require_tree 
