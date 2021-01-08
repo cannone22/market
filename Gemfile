@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 gem  "materialize-sass" ,  "~> 1.0.0"
 # Use Active Storage variant
 gem 'devise'
+
+gem "paperclip", "~> 6.0.0"
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb

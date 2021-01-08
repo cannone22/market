@@ -1,10 +1,10 @@
-<%= form_with(model: content) do |form| %>
-  <% if content.errors.any? %>
+<%= form_with model: @content, html: { multipart: true } do |form| %>
+  <% if @content.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
 
       <ul>
-        <% content.errors.each do |error| %>
+        <% @content.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>
@@ -25,6 +25,16 @@
     <%= form.label :price %>
     <%= form.text_field :price %>
   </div>
+  <div class="field">
+    <%= form.label :cover %>
+    <%= form.file_field :cover %>
+  </div>
+   <div class="field">
+    <%= form.label :allegato %>
+    <%= form.file_field :allegato %>
+  </div>
+
+
 
   <div class="actions">
     <%= form.submit %>
