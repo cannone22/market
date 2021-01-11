@@ -12,6 +12,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+ //= require materialize	
  //= require rails-ujs
  //= require jquery
  //= require materialize-sprockets

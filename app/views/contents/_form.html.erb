@@ -1,4 +1,4 @@
-<%= form_with model: @content, html: { multipart: true } do |form| %>
+<%= form_for @content, html: { multipart: true } do |form| %>
   <% if @content.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
@@ -12,31 +12,34 @@
   <% end %>
 
   <div class="field">
+    <label class="grey-text">Carica il contenuto che vuoi vendere</label>
+    <br>
+    <%= form.file_field :allegato %>
+  </div>
+    <br>
+  <div class="field">
     <%= form.label :titolo %>
     <%= form.text_field :titolo %>
   </div>
 
   <div class="field">
     <%= form.label :descrizione %>
-    <%= form.text_area :descrizione %>
+    <%= form.text_area :descrizione, class: "materialize-textarea" %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label :prezzo %>
     <%= form.text_field :price %>
   </div>
   <div class="field">
-    <%= form.label :cover %>
+    <label class="grey-text">Carica l'immagine del contenuto che vuoi vendere </label>
+    <br>
     <%= form.file_field :cover %>
   </div>
-   <div class="field">
-    <%= form.label :allegato %>
-    <%= form.file_field :allegato %>
-  </div>
 
-
-
+<br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Salva contenuto', class: "btn btn-form" %>
   </div>
+  <br>
 <% end %>
