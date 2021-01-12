@@ -30,6 +30,10 @@ gem 'paperclip', '~> 6.0.0'
 gem 'will_paginate', '~> 3.1.0'
 
 gem 'will_paginate-materialize'
+
+gem 'friendly_id', '~> 5.4.0'
+
+gem 'dotenv-rails', groups: [:development, :test]
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
