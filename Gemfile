@@ -26,6 +26,10 @@ gem  'materialize-sass' ,  '~> 1.0.0'
 gem 'devise'
 
 gem 'paperclip', '~> 6.0.0'
+
+gem 'will_paginate', '~> 3.1.0'
+
+gem 'will_paginate-materialize'
 # gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
