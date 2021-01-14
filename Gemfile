@@ -33,6 +33,10 @@ gem 'will_paginate-materialize'
 
 gem 'friendly_id', '~> 5.4.0'
 
+gem 'stripe'
+
+gem 'aasm'
+
 gem 'dotenv-rails', groups: [:development, :test]
 # gem 'image_processing', '~> 1.2'
 

@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aasm (5.1.1)
+      concurrent-ruby (~> 1.0)
     actioncable (6.1.0)
       actionpack (= 6.1.0)
       activesupport (= 6.1.0)
@@ -195,6 +197,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
+    stripe (5.29.0)
     terrapin (0.6.0)
       climate_control (>= 0.0.3, < 1.0)
     thor (1.0.1)
@@ -236,6 +239,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  aasm
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
@@ -251,6 +255,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   sqlite3 (~> 1.4)
+  stripe
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

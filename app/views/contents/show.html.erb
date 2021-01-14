@@ -14,11 +14,29 @@
 
 		<p>
 		  <strong>Descrizione:</strong>
-		  <%= @content.descrizione %>
-		</p>
+		  <%= @content.descrizione %></p>
+		  <% if current_user%>
+
+			<%= form_tag compra_path(slug: @content.slug) do %>
+			<script 
+			src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+			data-amount="<%=@content.price * 100%>"
+			data-name="<%= Marketplace%>"
+			data-description="<%= @content.titolo %>"
+			data-email="<%=current_user.email %>"
+			data-currency="usd"
+			data-locale="auto">
+			</script>
+			<%end%>
+			<% else %>
+				<p>Fai il <%= link_to "log in", new_user_session_path %> o <%= link_to "registrati", new_user_registration_path %> per acquistare il contenuto</p>
+			
+
+			<%end%>
+
 	</div>
 </div>
-
 
 
 
