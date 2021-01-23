@@ -37,6 +37,8 @@ gem 'stripe'
 
 gem 'aasm'
 
+gem 'sinatra', '1.0'
+
 gem 'dotenv-rails', groups: [:development, :test]
 # gem 'image_processing', '~> 1.2'
 

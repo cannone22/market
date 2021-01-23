@@ -24,7 +24,7 @@ class Sale < ApplicationRecord
 				save!
 				charge = Stripe::Charge.create(
 					amount: self.amount,
-					currency: "usd",
+					currency: "eur",
 					card: self.stripe_token,
 					description:"vendita di un contenuto")
 				self.update(stripe_id: charge.id)

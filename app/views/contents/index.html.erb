@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Contents</h1>
     <div class="row">
       <% @contents.each do |content| %>
@@ -13,7 +11,7 @@
               <span class="card-title activator grey-text text-darken-4"><%= content.titolo %><i class="material-icons right">more_vert</i></span>
               <div>
                 <span> Venduto da <%= content.user.name %></span>
-                <span class= "right"><%= number_to_currency(content.price) %></span>
+                <span class="right"><%= number_to_currency(content.price) %></span>
               </div>
                <br>
 

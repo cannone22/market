@@ -14,7 +14,7 @@ class Content < ApplicationRecord
 	
 	validates :titolo, :descrizione, :price, presence: true
 
-	validates :price, numericality: { greater_than: 0001}
+	validates :price, numericality: { greater_than: 0.49}
 
 	validates :cover, attachment_presence: true
 
