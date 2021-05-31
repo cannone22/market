@@ -5,7 +5,7 @@ class ApplicationCable::ConnectionTest < ActionCable::Connection::TestCase
   #   cookies.signed[:user_id] = 42
   #   esempio
   #   connect
-  #
+  #  prova Pull request
   #   assert_equal connection.user_id, "42"
   # end
 end
